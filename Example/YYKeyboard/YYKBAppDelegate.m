@@ -7,11 +7,18 @@
 //
 
 #import "YYKBAppDelegate.h"
+#import "YYKBViewController.h"
+#import "YYKBMiddleViewController.h"
 
 @implementation YYKBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    UIViewController *vc = [[UINavigationController alloc] initWithRootViewController:[[YYKBMiddleViewController alloc]init]];
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
 }

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'YYKeyboard'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of YYKeyboard.'
+  s.summary          = '用YYLabel实现自定义键盘'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+TODO: 用YYLabel实现自定义键盘.逻辑简单，一看就会
                        DESC
 
   s.homepage         = 'https://github.com/wangyu1001@live.cn/YYKeyboard'
@@ -31,10 +31,15 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'YYKeyboard/Classes/**/*'
+  s.public_header_files = 'YYKeyboard/Classes/*.h'
   
-  # s.resource_bundles = {
-  #   'YYKeyboard' => ['YYKeyboard/Assets/*.png']
-  # }
+  s.dependency 'YYKit'
+   s.resource_bundles = {
+     'YYKeyboard' => ['YYKeyboard/Assets/*.{png,xcassets,plist}']
+   }
+   
+   s.prefix_header_contents =
+   '#import "YYKit.h"'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
