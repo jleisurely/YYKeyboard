@@ -9,7 +9,7 @@
 
 https://upload-images.jianshu.io/upload_images/3249308-61216ad67a983d92.gif?imageMogr2/auto-orient/strip
 
-## 感谢 [https://github.com/VernonVan/PPStickerKeyboard](https://github.com/VernonVan/PPStickerKeyboard))。解决了很多不少问题
+## 感谢 [https://github.com/VernonVan/PPStickerKeyboard](https://github.com/VernonVan/PPStickerKeyboard))。解决了不少问题
 
 ## 实现思路
 YYKit提供了自定义表情的类，实现方式是UIScrollView+YYLabel进行实现
