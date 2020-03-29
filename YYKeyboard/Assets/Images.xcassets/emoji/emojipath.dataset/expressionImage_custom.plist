@@ -288,5 +288,7 @@
 	<string>face_zhu</string>
 	<key>[/zq]</key>
 	<string>face_zq</string>
+	<key>[/back]</key>
+	<string>delete-emoji</string>
 </dict>
 </plist>

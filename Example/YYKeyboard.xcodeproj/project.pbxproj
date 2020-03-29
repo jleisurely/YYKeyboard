@@ -25,6 +25,7 @@
 		73CA4819B8236568EAC0E7FE /* Pods_YYKeyboard_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB63590FF07FE8645F983A6 /* Pods_YYKeyboard_Tests.framework */; };
 		884AEC71242F62650072FEDF /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 884AEC70242F62650072FEDF /* main.storyboard */; };
 		884AEC74242F6E110072FEDF /* YYKBMiddleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 884AEC73242F6E110072FEDF /* YYKBMiddleViewController.m */; };
+		88567600243097FD004AEBF9 /* PPTextBackedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 885675FF243097FD004AEBF9 /* PPTextBackedString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		884AEC70242F62650072FEDF /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		884AEC72242F6E110072FEDF /* YYKBMiddleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYKBMiddleViewController.h; sourceTree = "<group>"; };
 		884AEC73242F6E110072FEDF /* YYKBMiddleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYKBMiddleViewController.m; sourceTree = "<group>"; };
+		885675FE243097FC004AEBF9 /* PPTextBackedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTextBackedString.h; sourceTree = "<group>"; };
+		885675FF243097FD004AEBF9 /* PPTextBackedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTextBackedString.m; sourceTree = "<group>"; };
 		9FF1B27291BD16D2F70BB545 /* Pods_YYKeyboard_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYKeyboard_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC4DE2A90D9D29AA0CA0125 /* YYKeyboard.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YYKeyboard.podspec; path = ../YYKeyboard.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EABA0889338C23B5BF3B2141 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				6003F59D195388D20070C39A /* YYKBAppDelegate.m */,
 				6003F5A5195388D20070C39A /* YYKBViewController.h */,
 				6003F5A6195388D20070C39A /* YYKBViewController.m */,
+				885675FE243097FC004AEBF9 /* PPTextBackedString.h */,
+				885675FF243097FD004AEBF9 /* PPTextBackedString.m */,
 				884AEC72242F6E110072FEDF /* YYKBMiddleViewController.h */,
 				884AEC73242F6E110072FEDF /* YYKBMiddleViewController.m */,
 				884AEC70242F62650072FEDF /* main.storyboard */,
@@ -391,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* YYKBAppDelegate.m in Sources */,
+				88567600243097FD004AEBF9 /* PPTextBackedString.m in Sources */,
 				6003F5A7195388D20070C39A /* YYKBViewController.m in Sources */,
 				884AEC74242F6E110072FEDF /* YYKBMiddleViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

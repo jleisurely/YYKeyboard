@@ -9,7 +9,7 @@
 #import "YYKBEmojiManager.h"
 
 //#define kScreenWidth [UIScreen mainScreen].bounds.size.width
-
+#define iconCount 31
 @interface YYKBView ()<UIScrollViewDelegate>
 /**test*/
 @property (nonatomic, strong)YYTextSimpleEmoticonParser *parser;
@@ -33,7 +33,7 @@
     NSDictionary *dict = [[YYKBEmojiManager sharedManager] imageMapper];
     __block NSArray *emojiArr = [dict allKeys];
     __block UIScrollView *scrllView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, floor((kScreenWidth - 8)/8) * 4 + 20)];
-    scrllView.contentSize = CGSizeMake(kScreenWidth * (emojiArr.count/32 + 1), floor((kScreenWidth - 8)/8) * 4 + 20);
+    scrllView.contentSize = CGSizeMake(kScreenWidth * (emojiArr.count/iconCount + 1), floor((kScreenWidth - 8)/8) * 4 + 20);
     [self addSubview:scrllView];
     scrllView.backgroundColor = self.backgroundColor;
     scrllView.pagingEnabled = YES;
@@ -44,7 +44,7 @@
     _pageControl.left = 0;
     _pageControl.numberOfPages = 5;
     /** test */
-    for (int i = 0; i < (emojiArr.count/32 + 1); i ++) {
+    for (int i = 0; i < (emojiArr.count/iconCount + 1); i ++) {
         YYLabel *label = [[YYLabel alloc]initWithFrame:CGRectMake(kScreenWidth * i, 0, kScreenWidth, floor((kScreenWidth - 8)/8) * 4 + 20)];
         YYTextLinePositionSimpleModifier *mod = [YYTextLinePositionSimpleModifier new];
         mod.fixedLineHeight = floor((kScreenWidth - 8)/8);
@@ -58,15 +58,18 @@
         label.numberOfLines = 0;
         [scrllView addSubview:label];
         
-        NSArray *reslutArr = [emojiArr subarrayWithRange:NSMakeRange(32 * i, 32 * i + 32  < emojiArr.count ?32 : emojiArr.count - 32*i)];
-        
+        NSMutableArray *reslutArr = [emojiArr subarrayWithRange:NSMakeRange(iconCount * i, iconCount * i + iconCount  < emojiArr.count ?iconCount : emojiArr.count - iconCount*i)].mutableCopy;
+        [reslutArr addObject:@"[/back]"];
         
         NSMutableAttributedString *lastStr = [[NSMutableAttributedString alloc] initWithString:@""];
         for (NSString *emojiStr in reslutArr) {
             NSMutableAttributedString *attriStr = [[NSMutableAttributedString alloc]initWithString:emojiStr];
             [attriStr setTextHighlightRange:NSMakeRange(0, emojiStr.length) color:[UIColor whiteColor] backgroundColor:self.backgroundColor tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
                 NSInteger page = scrllView.contentOffset.x/kScreenWidth;
-                NSString *emojiStr = emojiArr[page * 32 + range.location];
+                NSString *emojiStr = emojiArr[page * iconCount + range.location];
+                if (range.location == 31) {
+                    emojiStr = @"[/back]";
+                }
                 NSLog(@"%@", emojiStr);
                 if (self.keyboardClick) {
                     self.keyboardClick(emojiStr);
@@ -74,6 +77,8 @@
             }];
             
             [lastStr appendAttributedString:attriStr];
+            
+            
         }
         
         
