@@ -66,9 +66,11 @@
             NSMutableAttributedString *attriStr = [[NSMutableAttributedString alloc]initWithString:emojiStr];
             [attriStr setTextHighlightRange:NSMakeRange(0, emojiStr.length) color:[UIColor whiteColor] backgroundColor:self.backgroundColor tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
                 NSInteger page = scrllView.contentOffset.x/kScreenWidth;
-                NSString *emojiStr = emojiArr[page * iconCount + range.location];
-                if (range.location == 31) {
+                NSString *emojiStr;
+                if (range.location == iconCount || range.location + 1 == reslutArr.count) {
                     emojiStr = @"[/back]";
+                }else{
+                    emojiStr = emojiArr[page * iconCount + range.location];
                 }
                 NSLog(@"%@", emojiStr);
                 if (self.keyboardClick) {
