@@ -5,20 +5,19 @@
 [![License](https://img.shields.io/cocoapods/l/YYKeyboard.svg?style=flat)](https://cocoapods.org/pods/YYKeyboard)
 [![Platform](https://img.shields.io/cocoapods/p/YYKeyboard.svg?style=flat)](https://cocoapods.org/pods/YYKeyboard)
 
-## Example
+## 视频示例
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+https://upload-images.jianshu.io/upload_images/3249308-61216ad67a983d92.gif?imageMogr2/auto-orient/strip
 
-## Requirements
+## 感谢 [https://github.com/VernonVan/PPStickerKeyboard](https://github.com/VernonVan/PPStickerKeyboard))。解决了很多不少问题
 
-## Installation
+## 实现思路
+YYKit提供了自定义表情的类，实现方式是UIScrollView+YYLabel进行实现
+键盘中的按钮实际上是YYlabel上面的图片，并给图片加入了点击事件，间距用原图经过Core Graphics处理出间距，实际上还是图片，可以生成图片时直接处理成这个样子
+功能包含：
+自定义表情键盘，TextView中能够展示自定义表情，能够进行所有TextView的相关操作
+性能卓越
 
-YYKeyboard is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'YYKeyboard'
-```
 
 ## Author
 
