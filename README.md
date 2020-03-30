@@ -26,7 +26,21 @@ YYKit提供了自定义表情的类，实现方式是UIScrollView+YYLabel进行�
 
 
 欢迎提意见
-[简书](https://www.jianshu.com/p/c8722f1d0e1c)
+[简书](https://www.jianshu.com/p/c8722f1d0e1c)“留言入口”
+
+
+## Pod自动导入
+
+1、在 Podfile 中添加 pod 'YYKeyboard'。
+
+2、执行 pod install 或 pod update。
+
+3、阅读代码，如有问题可以下载Demo或者给简书留言。
+
+4、代码是花了2个小时实现的，代码会有一些问题，如您发现问题，可在简书留言给我
+
+再次感谢YY大牛，写了如此强大的三方库，膜拜中！！！！
+
 
 ## Author
 
