@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: 用YYLabel实现自定义键盘.逻辑简单，一看就会
                        DESC
 
-  s.homepage         = 'https://github.com/wangyu1001@live.cn/YYKeyboard'
+  s.homepage         = 'https://github.com/jleisurely/YYKeyboard'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'wangyu1001@live.cn' => 'wangyu1001@live.cn' }
-  s.source           = { :git => 'https://github.com/wangyu1001@live.cn/YYKeyboard.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/jleisurely/YYKeyboard.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
